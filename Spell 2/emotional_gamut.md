@@ -1,0 +1,22 @@
+---
+name: "Emotional Gamut"
+level: 0
+school: ""
+casting_time: ""
+range: ""
+components: ""
+duration: ""
+concentration: false
+ritual: false
+classes:
+  []
+image: ""
+source: ""
+---
+
+# Emotional Gamut
+
+
+
+### At Higher Levels
+

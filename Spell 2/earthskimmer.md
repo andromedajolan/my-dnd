@@ -1,0 +1,22 @@
+---
+name: "Earthskimmer"
+level: 0
+school: ""
+casting_time: ""
+range: ""
+components: ""
+duration: ""
+concentration: false
+ritual: false
+classes:
+  []
+image: ""
+source: ""
+---
+
+# Earthskimmer
+
+
+
+### At Higher Levels
+
