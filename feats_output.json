@@ -1,0 +1,156 @@
+[
+  {
+    "name": "Ability Score Improvement",
+    "category": "General",
+    "prerequisite": "Level 4+",
+    "description": "Increase one ability score of your choice by 2, or increase two ability scores of your choice by 1. This feat can't increase an ability score above 20.\n\n** You can take this feat more than once.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Alert",
+    "category": "Origin",
+    "prerequisite": "None",
+    "description": "You gain the following benefits.\n\n** When you roll Initiative, you can add your Proficiency Bonus to the roll.\n\n**Initiative Swap.** Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can't make this swap if you or the ally has the Incapacitated condition.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Archery",
+    "category": "Fighting Style",
+    "prerequisite": "Fighting Style Feature",
+    "description": "You gain a +2 bonus to attack rolls you make with Ranged weapons.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Boon of Combat Prowess",
+    "category": "Epic Boon",
+    "prerequisite": "Level 19+",
+    "description": "You gain the following benefits.\n\n** Increase one ability score of your choice by 1, to a maximum of 30.\n\n**Peerless Aim.** When you miss with an attack roll, you can hit instead. Once you use this benefit, you can't use it again until the start of your next turn.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Boon of Dimensional Travel",
+    "category": "Epic Boon",
+    "prerequisite": "Level 19+",
+    "description": "You gain the following benefits.\n\n** Increase one ability score of your choice by 1, to a maximum of 30.\n\n**Blink Steps.** Immediately after you take the Attack action or the Magic action, you can teleport up to 30 feet to an unoccupied space you can see.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Boon of Fate",
+    "category": "Epic Boon",
+    "prerequisite": "Level 19+",
+    "description": "You gain the following benefits.\n\n** Increase one ability score of your choice by 1, to a maximum of 30.\n\n**Improve Fate.** When you or another creature within 60 feet of you succeeds on or fails a D20 Test, you can roll 2d4 and apply the total rolled as a bonus or penalty to the d20 roll. Once you use this benefit, you can't use it again until you roll Initiative or finish a Short or Long Rest.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Boon of Irresistible Offense",
+    "category": "Epic Boon",
+    "prerequisite": "Level 19+",
+    "description": "You gain the following benefits.\n\n** Increase your Strength or Dexterity score by 1, to a maximum of 30.\n\n**Overcome Defenses.** The Bludgeoning, Piercing, and Slashing damage you deal always ignores Resistance.\n\n**Overwhelming Strike.** When you roll a 20 on the d20 for an attack roll, you can deal extra damage to the target equal to the ability score increased by this feat. The extra damage's type is the same as the attack's type.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Boon of Spell Recall",
+    "category": "Epic Boon",
+    "prerequisite": "Level 19+, Spellcasting Feature",
+    "description": "You gain the following benefits.\n\n** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.\n\n**Free Casting.** Whenever you cast a spell with a level 1–4 spell slot, roll 1d4. If the number you roll is the same as the slot's level, the slot isn't expended.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Boon of the Night Spirit",
+    "category": "Epic Boon",
+    "prerequisite": "Level 19+",
+    "description": "You gain the following benefits.\n\n** Increase one ability score of your choice by 1, to a maximum of 30.\n\n**Merge with Shadows.** While within Dim Light or Darkness, you can give yourself the Invisible condition as a Bonus Action. The condition ends on you immediately after you take an action, a Bonus Action, or a Reaction.\n\n**Shadowy Form.** While within Dim Light or Darkness, you have Resistance to all damage except Psychic and Radiant.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Boon of Truesight",
+    "category": "Epic Boon",
+    "prerequisite": "Level 19+",
+    "description": "You gain the following benefits.\n\n** Increase one ability score of your choice by 1, to a maximum of 30.\n\n**Truesight.** You have Truesight with a range of 60 feet.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Defense",
+    "category": "Fighting Style",
+    "prerequisite": "Fighting Style Feature",
+    "description": "While you're wearing Light, Medium, or Heavy armor, you gain a +1 bonus to Armor Class.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Grappler",
+    "category": "General",
+    "prerequisite": "Level 4+, Strength or Dexterity 13+",
+    "description": "You gain the following benefits.\n\n** Increase your Strength or Dexterity score by 1, to a maximum of 20.\n\n**Punch and Grab.** When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can use both the Damage and the Grapple option. You can use this benefit only once per turn.\n\n**Attack Advantage.** You have Advantage on attack rolls against a creature Grappled by you.\n\n**Fast Wrestler.** You don't have to spend extra movement to move a creature Grappled by you if the creature is your size or smaller.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Great Weapon Fighting",
+    "category": "Fighting Style",
+    "prerequisite": "Fighting Style Feature",
+    "description": "When you roll damage for an attack you make with a Melee weapon that you are holding with two hands, you can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile property to gain this benefit.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Magic Initiate",
+    "category": "Origin",
+    "prerequisite": "None",
+    "description": "You gain the following benefits.\n\n** You learn two cantrips of your choice from the Cleric, Druid, or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat's spells (choose when you select this feat).\n\n**Level 1 Spell.** Choose a level 1 spell from the same list you selected for this feat's cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.\n\n**Spell Change.** Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list.\n\n**Repeatable.** You can take this feat more than once, but you must choose a different spell list each time.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Mystic Conflux",
+    "category": "General",
+    "prerequisite": "None",
+    "description": "Through your repeated exposure to the natural flow of arcane magic throughout the world, you've adapted to attune with additional enchantments. You gain the following benefits:\n- ** You have advantage on Intelligence (Arcana) checks made to understand the nature of magical objects and devices.\n- **Enhanced Attunement.** You can now be attuned to a maximum of four magic items at once, rather than the normal limit of three.\n- **Identifying Touch.** You can cast the *Identify* spell once without expending a spell slot or material components. You regain the ability to cast it in this way when you finish a long rest.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Remarkable Recovery",
+    "category": "General",
+    "prerequisite": "None",
+    "description": "Your body has a preternatural ability to bounce back from the brink of death. You gain the following benefits:\n- ** Increase your Constitution score by 1, to a maximum of 20.\n- **Resilient Vitals.** When you are successfully stabilized while at 0 hit points, you regain hit points equal to your Constitution modifier (minimum of 1).\n- **Potent Healing.** Whenever you regain hit points as a result of a spell, a potion, or a class feature, you regain additional hit points equal to your Constitution modifier (minimum of 1).",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Savage Attacker",
+    "category": "Origin",
+    "prerequisite": "None",
+    "description": "You've trained to deal particularly damaging strikes. Once per turn when you hit a target with a weapon, you can roll the weapon's damage dice twice and use either roll against the target.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Skilled",
+    "category": "Origin",
+    "prerequisite": "None",
+    "description": "You gain proficiency in any combination of three skills or tools of your choice.\n\n** You can take this feat more than once.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Spell Driver",
+    "category": "General",
+    "prerequisite": "Level 11 or higher, the ability to cast at least one spell of 1st level or higher",
+    "description": "Through intense practice, you have learned to channel magical energy with incredible speed. You gain the following benefits:\n- ** You are no longer limited to casting only one non-cantrip spell per turn. However, if you cast two or more spells of 1st level or higher in a single turn, only one of them can be of 3rd level or higher.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Thrown Arms Master",
+    "category": "General",
+    "prerequisite": "None",
+    "description": "You've honed your ability to lob weaponry into the fray, including weapons not meant for ranged combat. You gain the following benefits:\n- ** Increase your Strength or Dexterity score by 1, to a maximum of 20.\n- **Master Thrower.** Simple and martial melee weapons that do not have the thrown property can be treated as if they have the thrown property when you wield them. One-handed weapons have a normal range of 20 feet and a long range of 60 feet, while two-handed weapons have a normal range of 15 feet and a long range of 30 feet.\n- **Returning Weapon.** When you hit with a ranged attack using a thrown melee weapon that has the Light property, the weapon immediately bounces back to your hand.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Two-Weapon Fighting",
+    "category": "Fighting Style",
+    "prerequisite": "Fighting Style Feature",
+    "description": "When you make an extra attack as a result of using a weapon that has the Light property, you can add your ability modifier to the damage of that attack if you aren't already adding it to the damage.",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Vital Sacrifice",
+    "category": "General",
+    "prerequisite": "None",
+    "description": "You've learned secrets of hemocraft that grant you esoteric power at the price of your own life force. As a bonus action, you can choose to take 1d6 necrotic damage to gain a **. Your blood boon lasts for 1 hour or until expended. You can expend this blood boon to gain one of the following benefits:\n- **Accuracy.** When you make an attack roll, you roll 1d6 and add it to the total.\n- **Ferocity.** When you hit with an attack or spell, you deal an additional 2d6 necrotic damage.\n- **Weakness.** When you cause a creature to make a Strength, Dexterity, or Constitution saving throw, you can roll 1d4 and reduce their save by the amount rolled.\n*Note: The damage you take to gain a blood boon cannot be reduced in any way.*",
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  }
+]

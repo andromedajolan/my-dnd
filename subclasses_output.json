@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Blood Domain",
+    "class": "Cleric",
+    "features": [
+      {
+        "name": "Cleric: Blood Domain",
+        "level": 1,
+        "text": "The Blood Domain focuses on the sanctity of life force and the power of sacrifice. These clerics use hemocraft to manipulate the vitality of themselves and their foes, standing at the balance between life and death.\n\n### Blood Domain Spells\nYou gain domain spells at the cleric levels listed in the Blood Domain Spells table.\n- 1st: *False Life, Sleep*\n- 3rd: *Hold Person, Ray of Enfeeblement*\n- 5th: *Haste, Slow*\n- 7th: *Blight, Stoneskin*\n- 9th: *Dominate Person, Hold Monster*\n\n### Bonus Proficiency\nYou gain proficiency with martial weapons.\n\n### Bloodletting Focus\nYour spells are particularly effective when your enemies are already bleeding. When you cast a spell of 1st level or higher that inflicts necrotic or poison damage, the target takes additional damage equal to 2 + the spell’s level. This feature does not affect undead or constructs.\n\n### Channel Divinity: Sanguine Bond\nAs an action, you can use your Channel Divinity to focus on a sample of blood from a creature and create a bond with it. For 1 hour, you sense the direction to the creature's location as long as it is within 10 miles of you. If the creature is in motion, you know the direction of its movement. While the bond is active, you can use an action to see through the creature's eyes and hear what it hears until the start of your next turn. The creature can make a Constitution saving throw to resist this effect; on a success, the bond ends.\n\n### Channel Divinity: Blood Puppet\nAs an action, you can use your Channel Divinity to briefly control the body of a creature you can see within 60 feet. The target must succeed on a Wisdom saving throw or be charmed by you for 1 minute. While charmed, the creature takes its turn immediately after yours and follows your commands. It can repeat the saving throw at the end of each of its turns. This feature does not affect undead or constructs.\n\n### Divine Strike\nOnce on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 necrotic damage. At 14th level, this extra damage increases to 2d8.\n\n### Vascular Corruption Aura\nAs an action, you can emit an aura of hemocraft for 1 minute. Enemies within 30 feet of you cannot regain hit points, and whenever an enemy starts its turn in the aura, it takes 2d6 necrotic damage."
+      }
+    ],
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Blood Magic",
+    "class": "Wizard",
+    "features": [
+      {
+        "name": "Wizard: Blood Magic",
+        "level": 2,
+        "text": "Wizards who follow the tradition of Blood Magic (often called Hemocraft) learn to use their own vitality as a component for their spells. This dangerous path allows them to push their magic beyond normal limits by sacrificing their physical well-being.\n\n### Hemocraft Savant\nThe gold and time you must spend to copy a blood magic spell into your spellbook is halved.\n\n### Blood Curse\nYou can sacrifice your health to heighten your spells. When you cast a spell that requires a creature to make a saving throw, you can use your reaction to take 1d10 necrotic damage (which cannot be reduced). If you do, the target has disadvantage on its first saving throw against the spell.\n\n### Sanguine Recall\nAs an action, you can sacrifice your life force to regain magical energy. You take necrotic damage equal to 1d8 per level of the spell slot you wish to regain. You can regain a spell slot of up to 5th level. You cannot use this feature again until you finish a long rest.\n\n### Blood Transcription\nYou can learn spells from the blood of the fallen. As an action, you can touch the blood of a creature that has died within the last minute. You instantly learn one spell that the creature knew or could cast (GM's choice). This spell is added to your spellbook if it is a wizard spell and of a level you can cast.\n\n### Mastery of Blood\nWhen you use your Blood Curse feature, you can choose to take no damage. If you do, you cannot use this feature again until you finish a long rest."
+      }
+    ],
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Circle of the Blighted",
+    "class": "Druid",
+    "features": [
+      {
+        "name": "Druid: Circle of the Blighted",
+        "level": 2,
+        "text": "Druids of the Circle of the Blighted have witnessed the corruption of nature and have learned to wield that very decay as a weapon. They stand at the edge of the desolation, using the power of the blight to preserve what remains.\n\n### Circle Spells\nYour connection to the blighted lands grants you access to certain spells. At 2nd, 3rd, 5th, 7th, and 9th level you gain access to the spells listed for that level in the Circle of the Blighted Spells table.\n- 2nd: *Bane, Inflict Wounds*\n- 3rd: *Blindness/Deafness, Darkness*\n- 5th: *Animate Dead, Vampiric Touch*\n- 7th: *Blight, Death Ward*\n- 9th: *Antilife Shell, Cloudkill*\n\n### Defiled Ground\nAs a bonus action, you can choose a 10-foot-radius patch of ground within 60 feet to become defiled for 1 minute. The area is difficult terrain for your enemies. When a creature starts its turn in the area or enters it for the first time on a turn, it takes 1d6 necrotic damage. You can move the patch up to 30 feet as a bonus action.\n\n### Blighted Shape\nWhen you use your Wild Shape, your form appears skeletal or decayed. While in this form, you have resistance to necrotic damage and your attacks deal an extra 1d6 necrotic damage.\n\n### Call of the Grave\nWhen a creature dies within 30 feet of you, you can use your reaction to cause a spectral vine to rise from its corpse and strike another creature within 15 feet. Make a melee spell attack; on a hit, the target takes 2d10 necrotic damage and is restrained until the end of its next turn.\n\n### Incarnation of Corruption\nYou become a conduit for the blight. You are immune to necrotic and poison damage, and any creature that hits you with a melee attack takes 1d10 necrotic damage."
+      }
+    ],
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "College of Tragedy",
+    "class": "Bard",
+    "features": [
+      {
+        "name": "Bard: College of Tragedy",
+        "level": 3,
+        "text": "Some bards find beauty in the sorrowful, the doomed, and the downcast. The College of Tragedy focuses on the narrative power of a hero's downfall, using the weight of fate to influence the world around them.\n\n### Poetry in Misery\nYou learn to harness the beauty in failure. Whenever you or an ally within 30 feet of you rolls a 1 on the d20 for an attack roll, an ability check, or a saving throw, you can use your reaction to soliloquize and regain one expended use of your Bardic Inspiration feature.\n\n### Sorrowful Fate\nWhen you or an ally you can see forces a creature to make a saving throw, you can expend one use of your Bardic Inspiration to change the type of saving throw to a Charisma save instead. If the target fails this save, you roll your Bardic Inspiration die and the target takes psychic damage equal to the result. If the target is reduced to 0 hit points within 1 minute of failing this save, it is magically compelled to utter darkly poetic final words before dying. You can use this feature once per short or long rest.\n\n### Tale of Hubris\nWhen a creature scores a critical hit against you or an ally within 60 feet of you that you can see, you can use your reaction and expend one use of your Bardic Inspiration to target the attacking creature. For 1 minute, or until you use this feature again, any critical hit scored against that target deals additional damage equal to your Bardic Inspiration die.\n\n### Impending Misfortune\nWhen you make an attack roll or a saving throw, you can gain a +10 bonus to the roll. However, the next attack roll or saving throw you make takes a -10 penalty. If the penalty is not used within 1 minute, it disappears. You can use this feature once per short or long rest, or if you are reduced to 0 hit points and regain consciousness.\n\n### Nimbus of Pathos\nAs an action, you can touch a willing creature and empower it with tragic heroism. For 1 minute, the creature gains the following benefits and drawbacks:\n- It has a +4 bonus to AC.\n- It has advantage on attack rolls and saving throws.\n- Its weapon and spell attacks deal an extra 1d10 radiant damage.\n- Any attack roll against the creature scores a critical hit on a roll of 18–20."
+      }
+    ],
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Moon Domain",
+    "class": "Cleric",
+    "features": [
+      {
+        "name": "Cleric: Moon Domain",
+        "level": 1,
+        "text": "The Moon Domain focuses on the celestial bodies that watch over the night. These clerics draw power from the phases of the moon, using its light to reveal secrets, protect allies, and shroud themselves in mystery.\n\n### Moon Domain Spells\nYou gain domain spells at the cleric levels listed in the Moon Domain Spells table.\n- 1st: *Faerie Fire, Silent Image*\n- 3rd: *Invisibility, Moonbeam*\n- 5th: *Hypnotic Pattern, Major Image*\n- 7th: *Confusion, Greater Invisibility*\n- 9th: *Dream, Seeming*\n\n### Clarified Vision\nYour sight is adjusted to the dimness of the night. You gain darkvision out to a range of 60 feet. If you already have darkvision, its range increases by 30 feet. Additionally, you have advantage on Wisdom (Perception) checks that rely on sight while in dim light or darkness.\n\n### Moonbeam Sense\nYou can see the true form of any shapechanger within 60 feet of you that isn't behind total cover.\n\n### Channel Divinity: Blessing of the Full Moon\nAs an action, you can use your Channel Divinity to grant a willing creature within 30 feet of you a moon-blessed protection. For 1 hour, the creature has advantage on Dexterity (Stealth) checks and its AC increases by 1.\n\n### Channel Divinity: Mind of the Cunning Moon\nAs an action, you can use your Channel Divinity to shield your mind or the mind of an ally. Choose one creature within 30 feet of you. For 1 hour, the target has advantage on Intelligence, Wisdom, and Charisma saving throws.\n\n### Potent Spellcasting\nYou add your Wisdom modifier to the damage you deal with any cleric cantrip.\n\n### Eclipse Aura\nAs an action, you can surround yourself with a 30-foot aura of magical shadow for 1 minute. The area is heavily obscured for your enemies, but only lightly obscured for you and your allies. Enemies that start their turn in the aura must succeed on a Wisdom saving throw or be frightened until the start of their next turn."
+      }
+    ],
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Oath of the Open Sea",
+    "class": "Paladin",
+    "features": [
+      {
+        "name": "Paladin: Oath of the Open Sea",
+        "level": 3,
+        "text": "The Oath of the Open Sea calls to paladins who feel the pull of the horizon and the mystery of the tides. These paladins value freedom, the preservation of the natural order of the waves, and the protection of those who travel the vast, uncharted waters.\n\n### Tenets of the Open Sea\nThe tenets of this oath emphasize the fluid and ever-changing nature of the ocean.\n- **No Greater Life than Freedom.** No one should be allowed to enslave or unduly or unjustly imprison another.\n- **Trust the Skies.** The guidance of the stars and the movement of the clouds are as reliable as any map.\n- **Adapt like the Water.** Be prepared for the storm and the calm alike.\n\n### Oath Spells\nYou gain oath spells at the paladin levels listed in the Oath of the Open Sea Spells table.\n- 3rd: *Create or Destroy Water, Fog Cloud*\n- 5th: *Augury, Misty Step*\n- 9th: *Call Lightning, Tidal Wave*\n- 13th: *Control Water, Freedom of Movement*\n- 17th: *Commune with Nature, Maelstrom*\n\n### Channel Divinity\nYou gain the following two Channel Divinity options:\n- **Marine Layer.** As an action, you can channel the sea to create a thick cloud of fog that surrounds you in a 20-foot radius. The fog moves with you and lasts for 10 minutes. You and your allies within the fog have heavily obscured cover from creatures outside it, but you can see through it clearly.\n- **Fury of the Tides.** As a bonus action, you can empower your attacks with the crashing force of the waves for 1 minute. Once per turn when you hit a creature with a melee attack, you can push the target up to 10 feet away from you. If the target is pushed into a solid object or another creature, it takes additional bludgeoning damage equal to your Charisma modifier.\n\n### Aura of Liberation\nYou and any creatures of your choice within 10 feet of you cannot be grappled or restrained, and you ignore the effects of difficult terrain. At 18th level, the range of this aura increases to 30 feet.\n\n### Stormy Waters\nWhen a creature enters your reach or moves within it, you can use your reaction to deal 2d6 bludgeoning damage to the creature and knock it prone. The creature can make a Strength saving throw to avoid being knocked prone.\n\n### Mythic Swashbuckler\nAs an action, you can become an avatar of the tides for 1 minute. You gain the following benefits:\n- You have a climb speed and swim speed equal to your walking speed.\n- You have advantage on attack rolls against any creature that is currently grappled or restrained.\n- You can take the Dash or Disengage action as a bonus action."
+      }
+    ],
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Path of the Juggernaut",
+    "class": "Barbarian",
+    "features": [
+      {
+        "name": "Barbarian: Path of the Juggernaut",
+        "level": 3,
+        "text": "The Path of the Juggernaut is a tradition of unstoppable force. These barbarians learn to use their bodies as living siege engines, crashing through the front lines of any battlefield.\n\n### Spirit of the Crusher\nWhile you are raging, your strikes become heavy with momentum. Once on each of your turns when you hit a creature with a melee attack using a heavy weapon, you can move that creature up to 5 feet to an unoccupied space. If you are also using the Great Weapon Master feat, you can move them up to 10 feet.\n\n### Siegebreaker\nYou deal double damage to objects and structures. Additionally, you cannot be moved against your will while you are raging, provided you are on the ground.\n\n### Stance of the Mountain\nYou have learned to root yourself to the earth. While you are raging, you have advantage on Strength saving throws and cannot be knocked prone.\n\n### Unstoppable Force\nWhile you are raging, you can take the Dash action as a bonus action. If you move at least 20 feet in a straight line toward a creature and then hit it with a melee weapon attack, the target must succeed on a Strength saving throw (DC 8 + your Strength modifier + your proficiency bonus) or be knocked prone and stunned until the end of your next turn."
+      }
+    ],
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Runechild",
+    "class": "Sorcerer",
+    "features": [
+      {
+        "name": "Sorcerer: Runechild",
+        "level": 1,
+        "text": "Runechildren are sorcerers whose bodies act as living conduits for arcane runes. These runes appear on the sorcerer's skin as glowing sigils that can be charged with energy and expended to shield the sorcerer or empower their spells.\n\n### Essence Runes\nYou have a number of Essence Runes equal to your sorcerer level. These runes are normally dormant but glow when charged. Whenever you spend sorcery points, a number of your dormant runes equal to the points spent become charged. You can expend charged runes to use various subclass features. You regain all charged runes when you finish a long rest.\n\n### Runic Magic\nYou learn additional spells when you reach certain levels in this class. These spells do not count against your number of sorcerer spells known.\n- 1st: *Longstrider, Shield*\n- 3rd: *Lesser Restoration, Protection from Poison*\n- 5th: *Dispel Magic, Remove Curse*\n- 7th: *Death Ward, Freedom of Movement*\n- 9th: *Greater Restoration, Telekinesis*\n\n### Glyph of Aegis\nAs a reaction when you take damage, you can expend any number of charged runes to reduce the damage by 1d6 per rune expended.\n\n### Sigils of Empowerment\nWhen you cast a spell, you can expend a charged rune to grant yourself advantage on the next ability check or saving throw you make before the end of your next turn.\n\n### Manifested Force\nAs a bonus action, you can expend a charged rune to manifest arcane energy around you. For 1 minute, you have a fly speed of 60 feet and can hover.\n\n### Arcane Exemplar\nAs an action, you can expend 6 charged runes to enter an ascended state for 1 minute. While in this state, you have resistance to all damage, and whenever you cast a spell, you regain 1d4 sorcery points."
+      }
+    ],
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  },
+  {
+    "name": "Way of the Cobalt Soul",
+    "class": "Monk",
+    "features": [
+      {
+        "name": "Monk: Way of the Cobalt Soul",
+        "level": 3,
+        "text": "Monks of the Way of the Cobalt Soul are driven by a singular purpose: the pursuit of truth. They use their physical prowess to extract information from their enemies and protect the knowledge of the world.\n\n### Extract Aspects\nWhenever you hit a creature with one of the attacks granted by your Flurry of Blows, you can analyze its physical form. You learn the creature's damage vulnerabilities, resistances, and immunities.\n\n### Extort Truth\nWhen you hit a creature with an Unarmed Strike, you can spend 1 ki point to force it to make a Charisma saving throw. On a failure, the creature cannot tell a deliberate lie for 10 minutes. You know if the creature succeeds or fails.\n\n### Mind of Mercury\nYou can take a number of additional reactions each round equal to your Intelligence modifier (minimum of 1), but you can only take one reaction per turn. Each additional reaction costs 1 ki point.\n\n### Debilitating Barrage\nWhen you hit a creature with an Unarmed Strike, you can spend 3 ki points to cause it to gain vulnerability to one damage type of your choice for 1 minute, or until it takes damage of that type."
+      }
+    ],
+    "source": "Tal'Dorei Campaign Setting Reborn"
+  }
+]
