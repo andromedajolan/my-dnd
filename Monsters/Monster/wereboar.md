@@ -1,0 +1,49 @@
+---
+name: "Wereboar"
+size: "Medium"
+monster_type: "humanoid (human, shapechanger)"
+alignment: "Neutral Evil"
+cr: "4"
+ac: "10"
+hp: "78 (12d8 + 24)"
+speed: "walk 30 ft. (40 ft. in boar form)"
+str: 17
+dex: 10
+con: 15
+int: 10
+wis: 11
+cha: 8
+saves: ""
+skills: "+2"
+immunities: "bludgeoning, piercing, slashing (from nonmagical attacks that aren't silvered)"
+resistances: ""
+vulnerabilities: ""
+conditionImmunities: ""
+senses: ""
+languages: "Common (can't speak in boar form)"
+image: ""
+source: "MM"
+---
+
+# Wereboar
+
+*Medium humanoid (human, shapechanger), Neutral Evil*
+
+### Traits
+***Shapechanger.*** The wereboar can use its action to polymorph into a boar-humanoid hybrid or into a boar, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+***Charge (Boar or Hybrid Form Only).*** If the wereboar moves at least 15 feet straight toward a target and then hits it with its tusks on the same turn, the target takes an extra 7 ({@damage 2d6}) slashing damage. If the target is a creature, it must succeed on a {@dc 13} Strength saving throw or be knocked {@condition prone}.
+***Relentless (Recharges after a Short or Long Rest).*** If the wereboar takes 14 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.
+
+### Actions
+***Multiattack (Humanoid or Hybrid Form Only).*** The wereboar makes two attacks, only one of which can be with its tusks.
+***Maul (Humanoid or Hybrid Form Only).*** {@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) bludgeoning damage.
+***Tusks (Boar or Hybrid Form Only).*** {@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) slashing damage. If the target is a humanoid, it must succeed on a {@dc 12} Constitution saving throw or be cursed with wereboar lycanthropy.
+
+### Bonus Actions
+
+
+### Reactions
+
+
+### Legendary Actions
+
