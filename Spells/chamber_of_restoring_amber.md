@@ -1,0 +1,22 @@
+---
+name: "Chamber of Restoring Amber"
+level: 0
+school: ""
+casting_time: ""
+range: ""
+components: ""
+duration: ""
+concentration: false
+ritual: false
+classes:
+  []
+image: ""
+source: ""
+---
+
+# Chamber of Restoring Amber
+
+
+
+### At Higher Levels
+
