@@ -354,7 +354,7 @@ select option { background: #12121e; color: var(--gold); }
 .type-construct   .card { background: radial-gradient(ellipse at 50% 50%, #0e0e1c 0%, #07070d 70%); }
 .type-dragon      .card { background: radial-gradient(ellipse at 30% 20%, #2a0505 0%, #07070d 70%); }
 .type-elemental   .card { background: radial-gradient(ellipse at 50% 25%, #1c0d04 0%, #07070d 70%); }
-.type-fey         .card { background: radial-gradient(ellipse at 50% 30%, #1c051c 0%, #07070d 70%); }
+.type-fey          .card { background: radial-gradient(ellipse at 50% 30%, #1c051c 0%, #07070d 70%); }
 .type-fiend       .card { background: radial-gradient(ellipse at 30% 25%, #2a0202 0%, #07070d 70%); }
 .type-giant       .card { background: radial-gradient(ellipse at 50% 40%, #120d02 0%, #07070d 70%); }
 .type-humanoid    .card { background: radial-gradient(ellipse at 50% 25%, #050b14 0%, #07070d 70%); }
@@ -473,7 +473,6 @@ select option { background: #12121e; color: var(--gold); }
   <div class="site-sub">A Complete D&D Compendium</div>
 </header>
 
-<!-- NAV TABS -->
 <div class="nav-tabs">
   <button class="nav-tab active" data-section="monsters">⚔ Monsters</button>
   <button class="nav-tab" data-section="spells">✦ Spells</button>
@@ -486,16 +485,13 @@ select option { background: #12121e; color: var(--gold); }
 
 <div class="header-divider"></div>
 
-<!-- CONTROLS -->
 <div class="controls" id="controls"></div>
 <div class="stats-bar" id="statsBar">Consulting the ancient tomes…</div>
 
-<!-- GRID -->
 <div class="card-grid" id="cardGrid">
   <div class="loading">Summoning entries<br><div class="loading-ring"></div></div>
 </div>
 
-<!-- MODAL -->
 <div id="cardModal" class="modal-overlay" onclick="if(event.target===this)closeModal()">
   <div class="modal-inner">
     <button class="modal-close" onclick="closeModal()">✕</button>
@@ -717,14 +713,12 @@ function filterData(data) {
 
 // ── BUILD CARDS ───────────────────────────────────────────────────
 function buildMonsterCard(m) {
-  const tk    = typeKey(m.type);
-  const glyph = TYPE_GLYPH[tk]||'✦';
+  const tk = typeKey(m.type);
   const mtype = typeof m.type === 'string' ? m.type : (m.type?.type || '');
-const sub = [m.size, mtype?mtype.charAt(0).toUpperCase()+mtype.slice(1):'', m.alignment].filter(Boolean).join(' ');
-  const art   = m.image
-    ? `<img class="art-image" src="${RAW}/${m.image}" alt="${m.name}" loading="lazy">`
-    : `<div class="art-glyph">${glyph}</div>`;
-  const safe  = m.name.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+  const sub = [m.size, mtype ? mtype.charAt(0).toUpperCase() + mtype.slice(1) : '', m.alignment].filter(Boolean).join(' ');
+  const imgSrc = m.image ? `${RAW}/${m.image}` : `Images/Monsters/${tk.charAt(0).toUpperCase() + tk.slice(1)}.png`;
+  const artHTML = `<img class="art-image" src="${imgSrc}" alt="${m.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="art-glyph" style="display:none">${TYPE_GLYPH[tk]||'✦'}</div>`;
+  const safe = m.name.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
   return `
 <div class="card-wrap type-${tk}" onclick="openModal('monsters','${safe}')" title="View stat block">
   <div class="card" style="height:370px;display:flex;flex-direction:column;">
@@ -732,7 +726,7 @@ const sub = [m.size, mtype?mtype.charAt(0).toUpperCase()+mtype.slice(1):'', m.al
       <div class="card-name">${m.name}</div>
       ${sub?`<div class="card-subtitle">${sub}</div>`:''}
     </div>
-    <div class="card-body" style="flex:1;overflow:hidden;">${art}</div>
+    <div class="card-body" style="flex:1;overflow:hidden;display:flex;align-items:center;justify-content:center;">${artHTML}</div>
     <div class="card-footer">
       <span class="footer-source">${m.source||''}</span>
       <span class="badge">CR ${m.cr||'?'}</span>
