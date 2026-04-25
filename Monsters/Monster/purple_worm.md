@@ -1,0 +1,47 @@
+---
+name: "Purple Worm"
+size: "Gargantuan"
+monster_type: "monstrosity"
+alignment: "Unaligned"
+cr: "15"
+ac: "18 (natural armor)"
+hp: "247 (15d20 + 90)"
+speed: "walk 50 ft., burrow 30 ft."
+str: 28
+dex: 7
+con: 22
+int: 1
+wis: 8
+cha: 4
+saves: "+11, +4"
+skills: ""
+immunities: ""
+resistances: ""
+vulnerabilities: ""
+conditionImmunities: ""
+senses: "blindsight 30 ft., tremorsense 60 ft."
+languages: ""
+image: ""
+source: "MM"
+---
+
+# Purple Worm
+
+*Gargantuan monstrosity, Unaligned*
+
+### Traits
+***Tunneler.*** The worm can burrow through solid rock at half its burrow speed and leaves a 10-foot-diameter tunnel in its wake.
+
+### Actions
+***Multiattack.*** The worm makes two attacks: one with its bite and one with its stinger.
+***Bite.*** {@atk mw} {@hit 14} to hit, reach 10 ft., one target. {@h}22 ({@damage 3d8 + 9}) piercing damage. If the target is a Large or smaller creature, it must succeed on a {@dc 19} Dexterity saving throw or be swallowed by the worm. A swallowed creature is {@condition blinded} and {@condition restrained}, it has {@quickref Cover||3||total cover} against attacks and other effects outside the worm, and it takes 21 ({@damage 6d6}) acid damage at the start of each of the worm's turns. If the worm takes 30 damage or more on a single turn from a creature inside it, the worm must succeed on a {@dc 21} Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall {@condition prone} in a space within 10 feet of the worm. If the worm dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 20 feet of movement, exiting {@condition prone}.
+***Tail Stinger.*** {@atk mw} {@hit 14} to hit, reach 10 ft., one creature. {@h}19 ({@damage 3d6 + 9}) piercing damage, and the target must make a {@dc 19} Constitution saving throw, taking 42 ({@damage 12d6}) poison damage on a failed save, or half as much damage on a successful one.
+
+### Bonus Actions
+
+
+### Reactions
+
+
+### Legendary Actions
+
