@@ -551,6 +551,20 @@ function scoreAndMod(n) {
 }
 function renderMd(text) {
   if (!text) return '';
+  text = text.replace(/\{@atk[r]?\s+[^}]*\}/g, '')
+             .replace(/\{@hit\s+(\d+)\}/g, '+$1')
+             .replace(/\{@h\}/g, '')
+             .replace(/\{@hom\}/g, '')
+             .replace(/\{@damage\s+([^}]+)\}/g, '$1')
+             .replace(/\{@dc\s+(\d+)\}/g, 'DC $1')
+             .replace(/\{@condition\s+([^}|]+)[^}]*\}/g, '$1')
+             .replace(/\{@spell\s+([^}|]+)[^}]*\}/g, '$1')
+             .replace(/\{@creature\s+([^}|]+)[^}]*\}/g, '$1')
+             .replace(/\{@skill\s+([^}|]+)[^}]*\}/g, '$1')
+             .replace(/\{@action\s+([^}|]+)[^}]*\}/g, '$1')
+             .replace(/\{@item\s+([^}|]+)[^}]*\}/g, '$1')
+             .replace(/\{@\w+\s+([^}|]+)[^}]*\}/g, '$1')
+             .replace(/\{@\w+\}/g, '');
   return text
     .replace(/\*{3}([^*]+)\*{3}/g,'<strong>$1</strong>')
     .replace(/\*{2}([^*]+)\*{2}/g,'<strong>$1</strong>')
