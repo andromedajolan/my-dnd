@@ -1,0 +1,22 @@
+---
+name: "Benediction"
+level: 0
+school: ""
+casting_time: ""
+range: ""
+components: ""
+duration: ""
+concentration: false
+ritual: false
+classes:
+  []
+image: ""
+source: ""
+---
+
+# Benediction
+
+
+
+### At Higher Levels
+
