@@ -536,7 +536,7 @@ const TYPE_GLYPH = {
 };
 function typeKey(t) {
   if (!t) return 'unknown';
-  const lo = t.toLowerCase();
+  const lo = (typeof t === 'string' ? t : t.type || '').toLowerCase();
   return KNOWN_TYPES.find(x => lo.includes(x)) || 'unknown';
 }
 function crSort(v) {
