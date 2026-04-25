@@ -1,0 +1,22 @@
+---
+name: "Geomantic Discernment"
+level: 0
+school: ""
+casting_time: ""
+range: ""
+components: ""
+duration: ""
+concentration: false
+ritual: false
+classes:
+  []
+image: ""
+source: ""
+---
+
+# Geomantic Discernment
+
+
+
+### At Higher Levels
+
