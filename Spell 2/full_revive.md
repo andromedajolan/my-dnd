@@ -1,0 +1,22 @@
+---
+name: "Full Revive"
+level: 0
+school: ""
+casting_time: ""
+range: ""
+components: ""
+duration: ""
+concentration: false
+ritual: false
+classes:
+  []
+image: ""
+source: ""
+---
+
+# Full Revive
+
+
+
+### At Higher Levels
+
