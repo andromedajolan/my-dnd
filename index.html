@@ -705,7 +705,8 @@ function filterData(data) {
 function buildMonsterCard(m) {
   const tk    = typeKey(m.type);
   const glyph = TYPE_GLYPH[tk]||'✦';
-  const sub   = [m.size, m.type?m.type.charAt(0).toUpperCase()+m.type.slice(1):'', m.alignment].filter(Boolean).join(' ');
+  const mtype = typeof m.type === 'string' ? m.type : (m.type?.type || '');
+const sub = [m.size, mtype?mtype.charAt(0).toUpperCase()+mtype.slice(1):'', m.alignment].filter(Boolean).join(' ');
   const art   = m.image
     ? `<img class="art-image" src="${RAW}/${m.image}" alt="${m.name}" loading="lazy">`
     : `<div class="art-glyph">${glyph}</div>`;
