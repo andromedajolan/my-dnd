@@ -1,0 +1,48 @@
+---
+name: "Green Hag"
+size: "Medium"
+monster_type: "fey"
+alignment: "Neutral Evil"
+cr: "3"
+ac: "17 (natural armor)"
+hp: "82 (11d8 + 33)"
+speed: "walk 30 ft."
+str: 18
+dex: 12
+con: 16
+int: 13
+wis: 14
+cha: 14
+saves: ""
+skills: "+3, +4, +4, +3"
+immunities: ""
+resistances: ""
+vulnerabilities: ""
+conditionImmunities: ""
+senses: "darkvision 60 ft."
+languages: "Common, Draconic, Sylvan"
+image: ""
+source: "MM"
+---
+
+# Green Hag
+
+*Medium fey, Neutral Evil*
+
+### Traits
+***Amphibious.*** The hag can breathe air and water.
+***Mimicry.*** The hag can mimic animal sounds and humanoid voices. A creature that hears the sounds can tell they are imitations with a successful {@dc 14} Wisdom ({@skill Insight}) check.
+
+### Actions
+***Claws.*** {@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) slashing damage.
+***Illusory Appearance.*** The hag covers herself and anything she is wearing or carrying with a magical illusion that makes her look like another creature of her general size and humanoid shape. The illusion ends if the hag takes a bonus action to end it or if she dies. The changes wrought by this effect fail to hold up to physical inspection. For example, the hag could appear to have smooth skin, but someone touching her would feel her rough flesh. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a {@dc 20} Intelligence ({@skill Investigation}) check to discern that the hag is disguised.
+***Invisible Passage.*** The hag magically turns {@condition invisible} until she attacks or casts a spell, or until her {@status concentration} ends (as if {@status concentration||concentrating} on a spell). While {@condition invisible}, she leaves no physical evidence of her passage, so she can be tracked only by magic. Any equipment she wears or carries is {@condition invisible} with her.
+
+### Bonus Actions
+
+
+### Reactions
+
+
+### Legendary Actions
+
