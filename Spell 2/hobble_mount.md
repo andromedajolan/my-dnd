@@ -1,0 +1,22 @@
+---
+name: "Hobble Mount"
+level: 0
+school: ""
+casting_time: ""
+range: ""
+components: ""
+duration: ""
+concentration: false
+ritual: false
+classes:
+  []
+image: ""
+source: ""
+---
+
+# Hobble Mount
+
+
+
+### At Higher Levels
+

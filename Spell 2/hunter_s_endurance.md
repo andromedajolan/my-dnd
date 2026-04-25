@@ -1,0 +1,22 @@
+---
+name: "Hunter's Endurance"
+level: 0
+school: ""
+casting_time: ""
+range: ""
+components: ""
+duration: ""
+concentration: false
+ritual: false
+classes:
+  []
+image: ""
+source: ""
+---
+
+# Hunter's Endurance
+
+
+
+### At Higher Levels
+
