@@ -508,8 +508,13 @@ const RAW    = ``;
 function rarityImg(r) {
   if (!r) return 'Common';
   const lo = r.toLowerCase().trim();
-  if (lo === 'very rare') return 'Very Rare';
-  return lo.charAt(0).toUpperCase() + lo.slice(1);
+  if (lo.includes('legendary')) return 'Legendary';
+  if (lo.includes('artifact')) return 'Legendary';
+  if (lo.includes('very rare')) return 'Very Rare';
+  if (lo.includes('rare')) return 'Rare';
+  if (lo.includes('uncommon')) return 'Uncommon';
+  if (lo.includes('common')) return 'Common';
+  return 'Common';
 }
 function spellImgSrc(s) {
   const school = (s.school || 'Evocation').trim();
