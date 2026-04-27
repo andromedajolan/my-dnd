@@ -619,21 +619,38 @@ function renderMd(text) {
 
 // ── RARITY ───────────────────────────────────────────────────────
 // ── NORMALIZE MAGIC ITEMS DATA ────────────────────────────────────
-// Some items from older/third-party sources store type, rarity, and
-// attunement info inside the description as *Type, Rarity (Attunement)*
-// instead of in dedicated fields. This function extracts them.
+// Magic item JSON uses multiple formats:
+//   1) Clean fields: type, rarity, attunement set correctly
+//   2) Embedded header: description starts with *Type, Rarity (Attunement)*
+//      (header must be parsed and stripped regardless of whether type is set,
+//       because some items have truncated/incorrect pre-set type values)
+//   3) Shortcode types: e.g. RD|DMG → Rod, WD|DMG → Wand, RG|XDMG → Ring
+const _TYPE_CODES = {
+  'RD':'Rod','WD':'Wand','RG':'Ring','SC':'Scroll','P':'Potion',
+  'S':'Shield','M':'Weapon','A':'Ammunition','AT':'Artisan Tool',
+  'GS':'Gaming Set','HA':'Heavy Armor','INS':'Instrument',
+  'LA':'Light Armor','MA':'Medium Armor','MNT':'Mount',
+  'OTH':'Other','T':'Tool','VEH':'Vehicle'
+};
 function normalizeMagicItem(mi) {
-  // Strip **bold markdown** from names
+  // 1. Strip **bold markdown** from names
   mi.name = mi.name.replace(/\*\*/g, '').trim();
-  // Only process items with no type set
-  if (mi.type && mi.type.trim() !== '') return;
+
+  // 2. Decode shortcode types (e.g. RD|DMG → Rod)
+  if (mi.type && mi.type.includes('|')) {
+    const code = mi.type.split('|')[0];
+    mi.type = _TYPE_CODES[code] || mi.type;
+  }
+
+  // 3. Re-parse description header if present — always, even if type is set,
+  //    because some source items have truncated/incorrect type values pre-baked in.
   if (!mi.description || !mi.description.startsWith('*')) return;
-  // Match header line: *Type, Rarity (Attunement note)*
   const m = mi.description.match(/^\*([^*]+)\*\s*\n?\n?([\s\S]*)/);
   if (!m) return;
   const header = m[1].trim();
   const rest   = m[2].trim();
-  // Find first comma outside parentheses to split type from rarity
+
+  // Find first comma at paren-depth 0 to split "Type" from "Rarity (Attunement)"
   let depth = 0, commaPos = -1;
   for (let i = 0; i < header.length; i++) {
     if (header[i] === '(') depth++;
@@ -641,9 +658,9 @@ function normalizeMagicItem(mi) {
     else if (header[i] === ',' && depth === 0) { commaPos = i; break; }
   }
   if (commaPos === -1) return;
+
   const typeStr   = header.substring(0, commaPos).trim();
   const rarityStr = header.substring(commaPos + 1).trim();
-  // Check for attunement note in parens at end
   const atm = rarityStr.match(/^(.*?)\s*\(([^)]+)\)\s*$/);
   if (atm) {
     mi.type            = typeStr;
