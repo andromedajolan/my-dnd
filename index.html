@@ -523,11 +523,14 @@ function magicItemImgSrc(mi) {
   if (type.includes('rod') || type.startsWith('rd|')) return `Images/Wands/${r} Focus.png`;
   if (type.includes('staff') || type.includes('spellcasting focus')) return `Images/Wands/${r} Focus.png`;
   if (type.includes('ring') || type.startsWith('rg|')) return `Images/Rings/${r} Wonder.png`;
-  if (type.includes('shield') || type.includes('armor (shield)')) return `Images/Shields/${r} Shield.png`;
-  if (type.includes('armor') || type.includes('light armor') || type.includes('medium armor') || type.includes('heavy armor')) return `Images/Armor/${r} Armor.png`;
-  if (type.includes('melee weapon') || type.includes('weapon (any melee')) return `Images/Weapons/${r} Melee.png`;
-  if (type.includes('ranged weapon') || type.includes('ammunition')) return `Images/Ranged/${r} Ranged.png`;
-  if (type.includes('potion') || type.startsWith('p|') || type.includes('gear') || type.includes('instrument')) return `Images/Adventuring Gear/${r} Gear.png`;
+  if (type.includes('armor (shield)') || type === 'shield' || type.startsWith('s|')) return `Images/Shields/${r} Shield.png`;
+  if (type.includes('armor') || type === 'light armor' || type === 'medium armor' || type === 'heavy armor') return `Images/Armor/${r} Armor.png`;
+  if (type === 'melee weapon' || type.includes('weapon (') || type.startsWith('m|')) return `Images/Weapons/${r} Melee.png`;
+  if (type === 'ranged weapon' || type.includes('ammunition')) return `Images/Ranged/${r} Ranged.png`;
+  if (type.includes('potion') || type.startsWith('p|')) return `Images/Adventuring Gear/${r} Gear.png`;
+  if (type === 'gear' || type.includes('instrument')) return `Images/Adventuring Gear/${r} Gear.png`;
+  if (type === 'oth' || type.startsWith('oth')) return `Images/Items/${r} Wonder.png`;
+  // Wondrous Item, empty type, and anything else → Wonder
   return `Images/Items/${r} Wonder.png`;
 }
 function equipmentImgSrc(e) {
