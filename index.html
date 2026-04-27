@@ -504,6 +504,46 @@ const REPO   = 'andromedajolan/my-dnd';
 const BRANCH = 'main';
 const RAW    = ``;
 
+// ── IMAGE HELPERS ─────────────────────────────────────────────────
+function rarityImg(r) {
+  if (!r) return 'Common';
+  const lo = r.toLowerCase().trim();
+  if (lo === 'very rare') return 'Very Rare';
+  return lo.charAt(0).toUpperCase() + lo.slice(1);
+}
+function spellImgSrc(s) {
+  const school = (s.school || 'Evocation').trim();
+  return `Images/Spell Schools/${school.charAt(0).toUpperCase() + school.slice(1).toLowerCase()}.png`;
+}
+function magicItemImgSrc(mi) {
+  const type = (mi.type || '').toLowerCase();
+  const r = rarityImg(mi.rarity);
+  if (type.includes('scroll') || type.startsWith('sc|')) return `Images/Scrolls/${r} Scroll.png`;
+  if (type.includes('wand') || type.startsWith('wd|')) return `Images/Wands/${r} Focus.png`;
+  if (type.includes('rod') || type.startsWith('rd|')) return `Images/Wands/${r} Focus.png`;
+  if (type.includes('staff') || type.includes('spellcasting focus')) return `Images/Wands/${r} Focus.png`;
+  if (type.includes('ring') || type.startsWith('rg|')) return `Images/Rings/${r} Wonder.png`;
+  if (type.includes('shield') || type.includes('armor (shield)')) return `Images/Shields/${r} Shield.png`;
+  if (type.includes('armor') || type.includes('light armor') || type.includes('medium armor') || type.includes('heavy armor')) return `Images/Armor/${r} Armor.png`;
+  if (type.includes('melee weapon') || type.includes('weapon (any melee')) return `Images/Weapons/${r} Melee.png`;
+  if (type.includes('ranged weapon') || type.includes('ammunition')) return `Images/Ranged/${r} Ranged.png`;
+  if (type.includes('potion') || type.startsWith('p|') || type.includes('gear') || type.includes('instrument')) return `Images/Adventuring Gear/${r} Gear.png`;
+  return `Images/Items/${r} Wonder.png`;
+}
+function equipmentImgSrc(e) {
+  const cat = (e.category || '').toLowerCase();
+  const sub = (e.subtype || '').toLowerCase();
+  if (cat === 'weapon' || cat === 'melee weapon') {
+    return sub.includes('ranged') ? `Images/Ranged/Common Ranged.png` : `Images/Weapons/Common Melee.png`;
+  }
+  if (cat === 'ranged weapon' || sub.includes('ranged')) return `Images/Ranged/Common Ranged.png`;
+  if (cat.includes('armor')) return `Images/Armor/Common Armor.png`;
+  if (cat === 'shield') return `Images/Shields/Common Shield.png`;
+  if (cat === 'staff' || cat === 'spellcasting focus') return `Images/Wands/Common Focus.png`;
+  return `Images/Adventuring Gear/Common Gear.png`;
+}
+
+
 // ── DATA FILES ────────────────────────────────────────────────────
 const DATA_FILES = {
   monsters:    'monsters_output.json',
