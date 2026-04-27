@@ -534,7 +534,8 @@ function magicItemImgSrc(mi) {
   if (type === 'ranged weapon' || type.includes('ammunition')) return `Images/Ranged/${r} Ranged.png`;
   if (type.includes('potion') || type.startsWith('p|')) return `Images/Adventuring Gear/${r} Gear.png`;
   if (type === 'gear' || type.includes('instrument')) return `Images/Adventuring Gear/${r} Gear.png`;
-  if (type === 'oth' || type.startsWith('oth')) return `Images/Items/${r} Wonder.png`;
+  if (type === 'oth' || type === 'other') return 'Images/Other/Other.png';
+  if ((mi.rarity || '').toLowerCase() === 'artifact') return `Images/Other/${r} Artifact.png`;
   // Wondrous Item → Crystal image by rarity
   if (type.includes('wondrous')) {
     const crystalMap = {
