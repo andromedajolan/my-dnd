@@ -884,6 +884,7 @@ function buildCard(item, section) {
 // ── RENDER CARDS ──────────────────────────────────────────────────
 function renderCards() {
   const data   = allData[currentSection]||[];
+  displayed    = data; // populate displayed with full dataset for filter options
   const filtered = filterData(data);
   const grid   = document.getElementById('cardGrid');
   const isWide = ['backgrounds','feats','subclasses'].includes(currentSection);
