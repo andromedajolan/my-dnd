@@ -618,6 +618,46 @@ function renderMd(text) {
 }
 
 // ── RARITY ───────────────────────────────────────────────────────
+// ── NORMALIZE MAGIC ITEMS DATA ────────────────────────────────────
+// Some items from older/third-party sources store type, rarity, and
+// attunement info inside the description as *Type, Rarity (Attunement)*
+// instead of in dedicated fields. This function extracts them.
+function normalizeMagicItem(mi) {
+  // Strip **bold markdown** from names
+  mi.name = mi.name.replace(/\*\*/g, '').trim();
+  // Only process items with no type set
+  if (mi.type && mi.type.trim() !== '') return;
+  if (!mi.description || !mi.description.startsWith('*')) return;
+  // Match header line: *Type, Rarity (Attunement note)*
+  const m = mi.description.match(/^\*([^*]+)\*\s*\n?\n?([\s\S]*)/);
+  if (!m) return;
+  const header = m[1].trim();
+  const rest   = m[2].trim();
+  // Find first comma outside parentheses to split type from rarity
+  let depth = 0, commaPos = -1;
+  for (let i = 0; i < header.length; i++) {
+    if (header[i] === '(') depth++;
+    else if (header[i] === ')') depth--;
+    else if (header[i] === ',' && depth === 0) { commaPos = i; break; }
+  }
+  if (commaPos === -1) return;
+  const typeStr   = header.substring(0, commaPos).trim();
+  const rarityStr = header.substring(commaPos + 1).trim();
+  // Check for attunement note in parens at end
+  const atm = rarityStr.match(/^(.*?)\s*\(([^)]+)\)\s*$/);
+  if (atm) {
+    mi.type            = typeStr;
+    mi.rarity          = atm[1].trim();
+    mi.attunement      = true;
+    mi.attunement_note = atm[2].trim();
+  } else {
+    mi.type       = typeStr;
+    mi.rarity     = rarityStr;
+    mi.attunement = false;
+  }
+  mi.description = rest;
+}
+
 function rarityClass(r) {
   if (!r) return '';
   const lo = r.toLowerCase().replace(/\s+/g,'-');
@@ -637,6 +677,7 @@ async function loadSection(section) {
     const res = await fetch(DATA_FILES[section]);
     if (!res.ok) throw new Error(res.status);
     allData[section] = await res.json();
+    if (section === 'magic_items') allData[section].forEach(normalizeMagicItem);
     return allData[section];
   } catch(e) {
     grid.innerHTML = `<div class="empty">Failed to load ${section}.<br><small>${e.message}</small></div>`;
