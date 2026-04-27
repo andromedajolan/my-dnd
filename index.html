@@ -532,7 +532,7 @@ function magicItemImgSrc(mi) {
   if (type.includes('armor') || type === 'light armor' || type === 'medium armor' || type === 'heavy armor') return `Images/Armor/${r} Armor.png`;
   if (type === 'melee weapon' || type.includes('weapon (') || type.startsWith('m|')) return `Images/Weapons/${r} Melee.png`;
   if (type === 'ranged weapon' || type.includes('ammunition')) return `Images/Ranged/${r} Ranged.png`;
-  if (type.includes('potion') || type.startsWith('p|')) return `Images/Adventuring Gear/${r} Gear.png`;
+  if (type.includes('potion') || type.startsWith('p|')) return `Images/Items/${r} Consumable.png`;
   if (type === 'gear' || type.includes('instrument')) return `Images/Adventuring Gear/${r} Gear.png`;
   if (type === 'oth' || type === 'other') return 'Images/Other/Other.png';
   if ((mi.rarity || '').toLowerCase() === 'artifact') return `Images/Other/${r} Artifact.png`;
@@ -549,7 +549,7 @@ function magicItemImgSrc(mi) {
     return `Images/Crystals/${crystal}.png`;
   }
   // Anything else → Wonder
-  return `Images/Items/${r} Wonder.png`;
+  return `Images/Items/${r} Consumable.png`;
 }
 function equipmentImgSrc(e) {
   const cat = (e.category || '').toLowerCase();
