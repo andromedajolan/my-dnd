@@ -535,7 +535,19 @@ function magicItemImgSrc(mi) {
   if (type.includes('potion') || type.startsWith('p|')) return `Images/Adventuring Gear/${r} Gear.png`;
   if (type === 'gear' || type.includes('instrument')) return `Images/Adventuring Gear/${r} Gear.png`;
   if (type === 'oth' || type.startsWith('oth')) return `Images/Items/${r} Wonder.png`;
-  // Wondrous Item, empty type, and anything else → Wonder
+  // Wondrous Item → Crystal image by rarity
+  if (type.includes('wondrous')) {
+    const crystalMap = {
+      'Legendary': 'Dawn Crystal',
+      'Very Rare': 'Forge Crystal',
+      'Rare':      'Tempest Crystal',
+      'Uncommon':  'Wild Crystal',
+      'Common':    'Justice Crystal'
+    };
+    const crystal = crystalMap[r] || 'Wild Crystal';
+    return `Images/Crystals/${crystal}.png`;
+  }
+  // Anything else → Wonder
   return `Images/Items/${r} Wonder.png`;
 }
 function equipmentImgSrc(e) {
