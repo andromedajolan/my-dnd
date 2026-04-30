@@ -444,7 +444,7 @@ select option { background: #12121e; color: var(--gold); }
 .rarity-common    { --card-accent: #aaaaaa; --card-name-color: #cccccc; }
 .rarity-uncommon  { --card-accent: #1eff00; --card-name-color: #5eff5e; }
 .rarity-rare      { --card-accent: #0070dd; --card-name-color: #5aadff; }
-.rarity-very.rarity-rare { --card-accent: #a335ee; --card-name-color: #cc88ff; }
+.rarity-very-rare { --card-accent: #a335ee; --card-name-color: #cc88ff; }
 .rarity-legendary { --card-accent: #ff8000; --card-name-color: #ffb060; }
 .rarity-artifact  { --card-accent: #e6cc80; --card-name-color: #ffe0a0; }
 
@@ -502,6 +502,7 @@ select option { background: #12121e; color: var(--gold); }
 <script>
 const REPO   = 'andromedajolan/my-dnd';
 const BRANCH = 'main';
+const BASE = `https://cdn.jsdelivr.net/gh/${REPO}@${BRANCH}`;
 const RAW    = ``;
 
 // ── IMAGE HELPERS ─────────────────────────────────────────────────
@@ -518,24 +519,24 @@ function rarityImg(r) {
 }
 function spellImgSrc(s) {
   const school = (s.school || 'Evocation').trim();
-  return `Images/Spell Schools/${school.charAt(0).toUpperCase() + school.slice(1).toLowerCase()}.png`;
+  return `${BASE}/Images/Spell Schools/${school.charAt(0).toUpperCase() + school.slice(1).toLowerCase()}.png`;
 }
 function magicItemImgSrc(mi) {
   const type = (mi.type || '').toLowerCase();
   const r = rarityImg(mi.rarity);
-  if (type.includes('scroll') || type.startsWith('sc|')) return `Images/Scrolls/${r} Scroll.png`;
-  if (type.includes('wand') || type.startsWith('wd|')) return `Images/Wands/${r} Focus.png`;
-  if (type.includes('rod') || type.startsWith('rd|')) return `Images/Wands/${r} Focus.png`;
-  if (type.includes('staff') || type.includes('spellcasting focus')) return `Images/Wands/${r} Focus.png`;
-  if (type.includes('ring') || type.startsWith('rg|')) return `Images/Rings/${r} Wonder.png`;
-  if (type.includes('armor (shield)') || type === 'shield' || type.startsWith('s|')) return `Images/Shields/${r} Shield.png`;
-  if (type.includes('armor') || type === 'light armor' || type === 'medium armor' || type === 'heavy armor') return `Images/Armor/${r} Armor.png`;
-  if (type === 'melee weapon' || type.includes('weapon (') || type.startsWith('m|')) return `Images/Weapons/${r} Melee.png`;
-  if (type === 'ranged weapon' || type.includes('ammunition')) return `Images/Ranged/${r} Ranged.png`;
-  if (type.includes('potion') || type.startsWith('p|')) return `Images/Items/${r} Consumable.png`;
-  if (type === 'gear' || type.includes('instrument')) return `Images/Adventuring Gear/${r} Gear.png`;
+  if (type.includes('scroll') || type.startsWith('sc|')) return `${BASE}/Images/Scrolls/${r} Scroll.png`;
+  if (type.includes('wand') || type.startsWith('wd|')) return `${BASE}/Images/Wands/${r} Focus.png`;
+  if (type.includes('rod') || type.startsWith('rd|')) return `${BASE}/Images/Wands/${r} Focus.png`;
+  if (type.includes('staff') || type.includes('spellcasting focus')) return `${BASE}/Images/Wands/${r} Focus.png`;
+  if (type.includes('ring') || type.startsWith('rg|')) return `${BASE}/Images/Rings/${r} Wonder.png`;
+  if (type.includes('armor (shield)') || type === 'shield' || type.startsWith('s|')) return `${BASE}/Images/Shields/${r} Shield.png`;
+  if (type.includes('armor') || type === 'light armor' || type === 'medium armor' || type === 'heavy armor') return `${BASE}/Images/Armor/${r} Armor.png`;
+  if (type === 'melee weapon' || type.includes('weapon (') || type.startsWith('m|')) return `${BASE}/Images/Weapons/${r} Melee.png`;
+  if (type === 'ranged weapon' || type.includes('ammunition')) return `${BASE}/Images/Ranged/${r} Ranged.png`;
+  if (type.includes('potion') || type.startsWith('p|')) return `${BASE}/Images/Items/${r} Consumable.png`;
+  if (type === 'gear' || type.includes('instrument')) return `${BASE}/Images/Adventuring Gear/${r} Gear.png`;
   if (type === 'oth' || type === 'other') return 'Images/Other/Other.png';
-  if ((mi.rarity || '').toLowerCase() === 'artifact') return `Images/Other/${r} Artifact.png`;
+  if ((mi.rarity || '').toLowerCase() === 'artifact') return `${BASE}/Images/Other/${r} Artifact.png`;
   // Wondrous Item → Crystal image by rarity
   if (type.includes('wondrous')) {
     const crystalMap = {
@@ -546,34 +547,34 @@ function magicItemImgSrc(mi) {
       'Common':    'Justice Crystal'
     };
     const crystal = crystalMap[r] || 'Wild Crystal';
-    return `Images/Crystals/${crystal}.png`;
+    return `${BASE}/Images/Crystals/${crystal}.png`;
   }
   // Anything else → Wonder
-  return `Images/Items/${r} Consumable.png`;
+  return `${BASE}/Images/Items/${r} Consumable.png`;
 }
 function equipmentImgSrc(e) {
   const cat = (e.category || '').toLowerCase();
   const sub = (e.subtype || '').toLowerCase();
   if (cat === 'weapon' || cat === 'melee weapon') {
-    return sub.includes('ranged') ? `Images/Ranged/Common Ranged.png` : `Images/Weapons/Common Melee.png`;
+    return sub.includes('ranged') ? `${BASE}/Images/Ranged/Common Ranged.png` : `${BASE}/Images/Weapons/Common Melee.png`;
   }
-  if (cat === 'ranged weapon' || sub.includes('ranged')) return `Images/Ranged/Common Ranged.png`;
-  if (cat.includes('armor')) return `Images/Armor/Common Armor.png`;
-  if (cat === 'shield') return `Images/Shields/Common Shield.png`;
-  if (cat === 'staff' || cat === 'spellcasting focus') return `Images/Wands/Common Focus.png`;
-  return `Images/Adventuring Gear/Common Gear.png`;
+  if (cat === 'ranged weapon' || sub.includes('ranged')) return `${BASE}/Images/Ranged/Common Ranged.png`;
+  if (cat.includes('armor')) return `${BASE}/Images/Armor/Common Armor.png`;
+  if (cat === 'shield') return `${BASE}/Images/Shields/Common Shield.png`;
+  if (cat === 'staff' || cat === 'spellcasting focus') return `${BASE}/Images/Wands/Common Focus.png`;
+  return `${BASE}/Images/Adventuring Gear/Common Gear.png`;
 }
 
 
 // ── DATA FILES ────────────────────────────────────────────────────
 const DATA_FILES = {
-  monsters:    'monsters_output.json',
-  spells:      'spells_output.json',
-  magic_items: 'magic_items_output.json',
-  equipment:   'equipment_output.json',
-  backgrounds: 'backgrounds_output.json',
-  feats:       'feats_output.json',
-  subclasses:  'subclasses_output.json',
+  monsters:    `${BASE}/monsters_output.json`,
+  spells:      `${BASE}/spells_output.json`,
+  magic_items: `${BASE}/magic_items_output.json`,
+  equipment:   `${BASE}/equipment_output.json`,
+  backgrounds: `${BASE}/backgrounds_output.json`,
+  feats:       `${BASE}/feats_output.json`,
+  subclasses:  `${BASE}/subclasses_output.json`,
 };
 
 // ── STATE ─────────────────────────────────────────────────────────
@@ -658,7 +659,7 @@ function normalizeMagicItem(mi) {
   // 3. Re-parse description header if present — always, even if type is set,
   //    because some source items have truncated/incorrect type values pre-baked in.
   if (!mi.description || !mi.description.startsWith('*')) return;
-  const m = mi.description.match(/^\*([^*]+)\*\s*\n?\n?([\s\S]*)/);
+  const m = mi.description.match(  /^\*([^*]+)\*\s*([\s\S]*)/);
   if (!m) return;
   const header = m[1].trim();
   const rest   = m[2].trim();
@@ -703,11 +704,24 @@ async function loadSection(section) {
   if (allData[section]) return allData[section];
   const grid = document.getElementById('cardGrid');
   grid.innerHTML = `<div class="loading">Loading ${section.replace('_',' ')}…<div class="loading-ring"></div></div>`;
+
+  // Try localStorage cache first
+  const cacheKey = `tome_${section}`;
+  try {
+    const cached = localStorage.getItem(cacheKey);
+    if (cached) {
+      allData[section] = JSON.parse(cached);
+      return allData[section];
+    }
+  } catch(e) { /* ignore cache errors */ }
+
   try {
     const res = await fetch(DATA_FILES[section]);
     if (!res.ok) throw new Error(res.status);
     allData[section] = await res.json();
     if (section === 'magic_items') allData[section].forEach(normalizeMagicItem);
+    // Cache in localStorage
+    try { localStorage.setItem(cacheKey, JSON.stringify(allData[section])); } catch(e) { /* quota exceeded */ }
     return allData[section];
   } catch(e) {
     grid.innerHTML = `<div class="empty">Failed to load ${section}.<br><small>${e.message}</small></div>`;
@@ -835,7 +849,7 @@ function buildMonsterCard(m) {
   const tk = typeKey(m.type);
   const mtype = typeof m.type === 'string' ? m.type : (m.type?.type || '');
   const sub = [m.size, mtype ? mtype.charAt(0).toUpperCase() + mtype.slice(1) : '', m.alignment].filter(Boolean).join(' ');
-  const imgSrc = m.image ? `${RAW}/${m.image}` : `Images/Monsters/${tk.charAt(0).toUpperCase() + tk.slice(1)}.png`;
+  const imgSrc = m.image ? `${BASE}/${m.image}` : `${BASE}/Images/Monsters/${tk.charAt(0).toUpperCase() + tk.slice(1)}.png`;
   const artHTML = `<img class="art-image" src="${imgSrc}" alt="${m.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="art-glyph" style="display:none">${TYPE_GLYPH[tk]||'✦'}</div>`;
   const safe = m.name.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
   return `
@@ -955,8 +969,8 @@ function buildCard(item, section) {
 // ── RENDER CARDS ──────────────────────────────────────────────────
 function renderCards() {
   const data   = allData[currentSection]||[];
-  displayed    = data; // populate displayed with full dataset for filter options
   const filtered = filterData(data);
+  displayed = filtered;
   const grid   = document.getElementById('cardGrid');
   const isWide = ['backgrounds','feats','subclasses'].includes(currentSection);
   grid.className = `card-grid${isWide?' wide':''}`;
